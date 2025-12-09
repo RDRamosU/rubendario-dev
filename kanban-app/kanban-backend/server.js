@@ -12,12 +12,12 @@ app.use(express.json());
 
 // Definir el puerto y la URI
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGO_URI = process.env.MONGO_URI;
 
 // Funcion para conectar la base de datos
 const connectDB = async () => {
     try {
-        await mongoose.connect(MONGODB_URI);
+        await mongoose.connect(MONGO_URI);
         console.log('MongoDB connectado exitosamente.');
     } catch (error) {
         console.error('Error de conexion a MongoDB:', error.message);
@@ -142,6 +142,7 @@ app.delete('/api/tasks/:id', async (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(PORT, () => {
-    console.log(`Servidor escuchando en http://localhost:${PORT}`);
-})
+app.listen(process.env.PORT || PORT, () => {
+    const actualPort = process.env.PORT || PORT;
+    console.log(`Servidor Express escuchando escuchando en el puerto:${actualPort}`);
+});

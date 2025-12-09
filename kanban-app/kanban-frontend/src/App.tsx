@@ -32,10 +32,10 @@ function App() {
   // Función que se ejecutará al hacer click en una tarea
   const handleStatusUpdate = async (taskId: string, currentStatus: string) => {
     // Se define el ciclo: new -> in-progress -> done -> new
-    const statusCycle: Task["status"][] = ['new', 'in-progress', 'done'];
+    const statusCycle: TaskStatus[] = ['new', 'in-progress', 'done'];
 
     // currentIndex debe ser un numero
-    const currentIndex = statusCycle.indexOf(currentStatus);
+    const currentIndex = statusCycle.indexOf(currentStatus as TaskStatus);
 
     // Calcula el siguiente indice siguiendo el operador % para el ciclo
     const nextIndex = (currentIndex + 1) % statusCycle.length;
