@@ -1,121 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luna Salón by Margarita | Belleza y Estilo</title>
-  <meta name="description" content="Salón de belleza en [Tu Ciudad]. Cortes, coloración, tratamientos, manicure. Reserva tu cita hoy." />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <style>
-    :root {
-      --bg: #fdfafb;
-      --text: #2d3436;
-      --accent: #d63384;
-      --light: #f8e9f0;
-      --card: #ffffff;
-      --gold: #f4c2c2;
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+  <meta name="description"
+    content="Salón de belleza en Cartago, Costa Rica. Especialistas en pestañas, cortes, tintes y tratamientos. Reserva tu cita hoy." />
+  
+    <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
 
-    /* WhatsApp Button */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      width: 60px; height: 60px;
-      border-radius: 50%;
-      display: flex; align-items:center; justify-content:center;
-      font-size: 1.8rem;
-      box-shadow: 0 4px 15px rgba(37,211,102,0.4);
-      z-index: 1000;
-      transition: .3s;
-    }
-    .whatsapp:hover { transform: scale(1.1); }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    header {
-      text-align:center;
-      padding: 5rem 1rem;
-      background: linear-gradient(rgba(214,51,132,0.05), rgba(255,255,255,0.1)), url('https://via.placeholder.com/1200x600/f8e9f0/ccc?text=Foto+Salón') center/cover;
-    }
-    .logo { font-size: 3.5rem; color: var(--accent); margin-bottom: .5rem; }
-    .tagline { font-size: 1.3rem; color: #636e72; max-width: 600px; margin: 1rem auto; }
+    <link rel="stylesheet" href="style.css">
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
-    section { padding: 4rem 0; }
-
-    /* Servicios */
-    .services .grid {
-      display: grid; gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    .service-card {
-      background: var(--card);
-      padding: 2rem;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-      transition: .3s;
-    }
-    .service-card:hover { transform: translateY(-8px); }
-    .service-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; }
-    .price { font-weight: 600; color: var(--accent); font-size: 1.3rem; }
-
-    /* Galería */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    .gallery img {
-      width: 100%; height: 200px; object-fit: cover;
-      border-radius: 12px;
-      transition: .3s;
-    }
-    .gallery img:hover { transform: scale(1.05); }
-
-    /* Formulario */
-    form {
-      max-width: 600px; margin: 2rem auto;
-      display: grid; gap: 1rem;
-    }
-    input, select, textarea {
-      padding: 1rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;
-    }
-    button {
-      background: var(--accent); color: white; border: none;
-      padding: 1rem; border-radius: 8px; font-weight: 600; cursor: pointer;
-      transition: .3s;
-    }
-    button:hover { background: #b52b70; }
-
-    footer {
-      text-align:center; padding: 3rem 1rem; background: var(--light);
-      color: #636e72; font-size: .9rem;
-    }
-    .social a { color: var(--accent); margin: 0 .5rem; font-size: 1.3rem; }
-  </style>
 </head>
+
 <body>
 
   <!-- WhatsApp -->
-  <a href="https://wa.me/50683155355?text=¡Hola! Quiero reservar una cita en Luna Salón" class="whatsapp" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://wa.me/50683155355?text=¡Hola! Quiero reservar una cita en Luna Salón" class="whatsapp"
+    target="_blank">
+    <img src="img/whatsapp-icon.png" alt="icono de whatsapp" class="whatsapp-icon">
   </a>
 
   <header>
     <div class="container">
-      <h1 class="logo">Luna Salón by Margarita </h1>
-      <p class="tagline">Belleza, estilo y cuidado personal</p>
+      <h1 class="logo">
+        <img src="img/luna-salon-logo.png" alt="Luna Salón by Margarita Logo" class="header-logo">
+      </h1>
+      <p class="tagline">Especialistas en pestañas, belleza y estilo</p>
     </div>
   </header>
 
@@ -123,62 +39,112 @@
     <div class="container">
       <h2 style="text-align:center; margin-bottom:2rem; font-size:2rem; color:var(--accent);">Nuestros Servicios</h2>
       <div class="grid">
+
         <div class="service-card">
-          <i class="fas fa-cut"></i>
-          <h3>Corte de Cabello</h3>
-          <p class="price">$25 - $45</p>
-          <p>Dama, caballero, infantil. Estilo a tu medida.</p>
+          <img src="icon/Kid.png" alt="corte de cabello para ninos(as)">
+          <h3>Corte infantil</h3>
+          <p class="price">₡4000</p>
+          <p>Corte de cabello para los mas pequeños.</p>
         </div>
+
         <div class="service-card">
-          <i class="fas fa-palette"></i>
-          <h3>Coloración</h3>
-          <p class="price">$60 - $120</p>
-          <p>Mechas, balayage, tintes permanentes.</p>
+          <img src="icon/Scissors.png" alt="corte de cabello para damas">
+          <h3>Corte de dama</h3>
+          <p class="price">₡15000</p>
+          <p>Corte, lavado y planchado </p>
         </div>
+
         <div class="service-card">
-          <i class="fas fa-spa"></i>
+          <img src="icon/Moustache.png" alt="servicio de barberia para los caballeros">
+          <h3>Servicio de Barberia</h3>
+          <p class="price">₡5000</p>
+          <p>Corte de cabello a la moda.</p>
+        </div>
+
+        <div class="service-card">
+          <img src="icon/Erlenmeyer.png" alt="tinte de cabello">
+          <h3>Tinte</h3>
+          <p class="price">₡22000</p>
+          <p>Retoque de raiz y tinte.</p>
+        </div>
+
+        <div class="service-card">
+          <img src="icon/Hair-Brush.png" alt="tratamientos capilares">
           <h3>Tratamientos</h3>
-          <p class="price">$35 - $80</p>
-          <p>Hidratación, keratina, botox capilar.</p>
+          <p class="price">₡30000 - ₡80000</p>
+          <p>Nanoplastia, keratina, botox capilar.</p>
         </div>
+
         <div class="service-card">
-          <i class="fas fa-hand-sparkles"></i>
-          <h3>Manicure & Pedicure</h3>
-          <p class="price">$20 - $40</p>
-          <p>Uñas perfectas con diseños únicos.</p>
+          <img src="icon/Eyelashes.png" alt="servicio de pestanas">
+          <h3>Pestañas</h3>
+          <p class="price">₡15000 - ₡35000</p>
+          <p>Naturales, Volumen Rusas y Fibras Tecnologicas.</p>
         </div>
+
+        <div class="service-card">
+          <img src="icon/Eyebrow.png" alt="servicio de perfilado de cejas">
+          <h3>Lifting & Laminado</h3>
+          <p class="price">₡20000</p>
+          <p>Lifting y laminado.</p>
+        </div>
+
+        <div class="service-card">
+          <img src="icon/Lipstick.png" alt="servicio de maquillaje y peinado">
+          <h3>Maquillaje y Peinado</h3>
+          <p class="price">₡40000</p>
+          <p>Lifting y laminado.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section class="gallery">
+  <section class="portafolio-gallery">
     <div class="container">
       <h2 style="text-align:center; margin-bottom:2rem; color:var(--accent);">Galería</h2>
       <div class="gallery">
-        <img src="https://via.placeholder.com/300/ffeef8/ccc?text=Antes+y+Después" alt="Transformación">
-        <img src="https://via.placeholder.com/300/f8e9f0/ccc?text=Mechas" alt="Mechas">
-        <img src="https://via.placeholder.com/300/f0f3f4/ccc?text=Corte" alt="Corte">
-        <img src="https://via.placeholder.com/300/ffeef8/ccc?text=Manicure" alt="Manicure">
+        <img src="img/pestanas.png" alt="Extensión de pestañas">
+        <img src="img/corte.png" alt="Corte de cabello">
+        <img src="img/coloracion.png" alt="Coloración de cabello">
+        <img src="img/tratamientos.png" alt="Tratamientos de cabello">
+
+        <img src="img/balayage_1.png" alt="Balayage">
+        <img src="img/balayage_2.png" alt="Balayage">
+
+        <img src="img/peinado_1.png" alt="Peinado">
+        <img src="img/peinado_2.png" alt="Peinado">
+        <img src="img/peinado_3.png" alt="Peinado">
+        <img src="img/peinado_4.png" alt="Peinado">
+        <img src="img/peinado_5.png" alt="Peinado">
+
       </div>
     </div>
   </section>
 
   <section class="contact">
     <div class="container">
-      <h2 style="text-align:center; margin-bottom:2rem; color:var(--accent);">Reserva tu Cita</h2>
-      <form action="https://formspree.io/f/tu-form-id" method="POST">
-        <input type="text" name="nombre" placeholder="Nombre completo" required>
-        <input type="tel" name="telefono" placeholder="Teléfono (WhatsApp)" required>
-        <select name="servicio" required>
+      <h2 class="section-title services-title">Reserva tu Cita</h2>
+      <div id="formMessage" style="text-align:center; margin-bottom:1rem;"></div>
+      <form id="reservaForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSfsl_RTXBIW_264bx3I81LGqPnHIv9noLqAs5hlXogVJsOwNQ/formResponse"
+        method="POST">
+        <input type="text" name="entry.1457553108" placeholder="Nombre completo" required>
+        <input type="tel" name="entry.66915142" placeholder="Teléfono (WhatsApp)" required>
+        <select name="entry.677048373" required>
           <option value="">Selecciona un servicio</option>
-          <option>Corte de cabello</option>
-          <option>Coloración</option>
-          <option>Tratamiento capilar</option>
-          <option>Manicure</option>
+          <option value="Corte infantil">Corte infantil</option>
+          <option value="Corte de dama">Corte de dama</option>
+          <option value="Servicio de Barberia">Servicio de Barberia</option>
+          <option value="Tinte">Tinte</option>
+          <option value="Tratamientos">Tratamientos</option>
+          <option value="Pestañas">Pestañas</option>
+          <option value="Lifting & Laminado">Lifting & Laminado</option>
+          <option value="Maquillaje y Peinado">Maquillaje y Peinado</option>
         </select>
-        <input type="date" name="fecha" required>
-        <textarea name="notas" placeholder="Notas (opcional)" rows="3"></textarea>
-        <button type="submit">Enviar Reserva</button>
+        <input type="date" name="entry.535377173" required min="2025-11-20">
+        <textarea name="entry.1661087390" placeholder="Notas (opcional)" rows="3"></textarea>
+        <button type="submit" id="enviarBtn">Enviar Reserva</button>
       </form>
       <p style="text-align:center; margin-top:1rem; color:#636e72;">
         O escríbenos directo por <a href="https://wa.me/50683155355" style="color:var(--accent);">WhatsApp</a>
@@ -196,6 +162,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="script.js"></script>
 </body>
+
 </html>

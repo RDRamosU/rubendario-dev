@@ -1,0 +1,10 @@
+# Archivo gitignore en mi-portafolio/
+
+# Ignora todas las carpetas node_modules en cualquier subdirectorio
+**/node_modules
+
+# Ignora archivos de configuración de entorno
+**/.env
+
+# Ignorar archivos de compilacion de React
+dist/
