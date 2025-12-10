@@ -18,12 +18,12 @@ app.use(express.json());
 
 // Definir el puerto y la URI
 const PORT = process.env.PORT || 3000;
-const MONGO_URI = process.env.MONGO_URI;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // Funcion para conectar la base de datos
 const connectDB = async () => {
     try {
-        await mongoose.connect(MONGO_URI);
+        await mongoose.connect(MONGODB_URI);
         console.log('MongoDB connectado exitosamente.');
     } catch (error) {
         console.error('Error de conexion a MongoDB:', error.message);
