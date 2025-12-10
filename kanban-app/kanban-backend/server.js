@@ -6,8 +6,14 @@ const cors = require('cors');
 
 // Crear una instancia de la app Express
 const app = express();
+
+const allowedOrigins = ['https://rubendario.dev'];
+const corsOptions = {
+    origin: allowedOrigins
+};
+
 // Middleware para habilitar CORS y leer JSON
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Definir el puerto y la URI

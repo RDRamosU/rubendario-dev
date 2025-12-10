@@ -20,7 +20,7 @@ function App() {
   const fetchTasks = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:3000/api/tasks');
+      const response = await axios.get('https://kanban-app-mhep.onrender.com/api/tasks');
       setTasks(response.data);
     } catch (error) {
       console.error("Hubo un error al obtener las tareas:", error);
@@ -43,7 +43,7 @@ function App() {
 
     try {
       // 1. Envía la solicitud PATCH al backend
-      await axios.patch(`http://localhost:3000/api/tasks/${taskId}`, {
+      await axios.patch(`https://kanban-app-mhep.onrender.com/api/tasks/${taskId}`, {
         status: nextStatus,
       });
       // 2. Después del éxito, se recarga la lista para mostrar el cambio
@@ -62,7 +62,7 @@ function App() {
     }
     try {
       // 1. Enviar la solicitud delete al backend
-      await axios.delete(`http://localhost:3000/api/tasks/${taskId}`);
+      await axios.delete(`https://kanban-app-mhep.onrender.com/api/tasks/${taskId}`);
 
       // 2. Despues, se recarga la pagina
       fetchTasks();
