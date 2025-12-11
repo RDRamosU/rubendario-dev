@@ -20,7 +20,7 @@ function App() {
   const fetchTasks = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await axios.get('https://kanban-app-mhep.onrender.com/api/tasks');
+      const response = await axios.get(`https://kanban-app-mhep.onrender.com/api/tasks`);
       setTasks(response.data);
     } catch (error) {
       console.error("Hubo un error al obtener las tareas:", error);

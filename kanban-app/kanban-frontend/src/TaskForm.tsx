@@ -25,7 +25,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ onTaskCreated }) => {
 
         try {
             // 1. Envía la solicitud POST a tu backend
-            await axios.post('http://localhost:3000/api/tasks', newTask);
+            await axios.post('https://kanban-app-mhep.onrender.com/api/tasks', newTask);
 
             // 2. Limpia el campo después del éxito
             setTitle('');
