@@ -10,7 +10,7 @@ const telefonoInput = document.querySelector('input[name="entry.66915142"]');
 const fechaInput = document.querySelector('input[name="entry.535377173"]');
 
 // Funcion de configuracion inicial
-function configurarFechaMinimia() {
+function configurarFechaMinima() {
   if (!fechaInput) return;
 
   const hoy = new Date();
@@ -22,15 +22,13 @@ function configurarFechaMinimia() {
   const fechaMinima = manana.toISOString().split('T')[0];
 
   // Establecer la fecha minima
-  fechaInput.min =fechaMinima;
+  fechaInput.min = fechaMinima;
 }
 
-// Llamar la funcion al cargar la pagina
-configurarFechaMinimia();
+configurarFechaMinima();
 
 // Funciones de Validacion
 
-// Validacion del nombre
 function validarNombre(nombre) {
   // Expresión Regular (RegEx): Solo letras, acentos, ñ, y espacios.
   const regex = /^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$/;
@@ -45,7 +43,6 @@ function validarNombre(nombre) {
   return regex.test(nombreLimpio);
 }
 
-//Validacion del telefono
 function validarTelefono(telefono) {
 
   // Quitar todos los espacios, guiones, parentesis para la verificacion
@@ -64,11 +61,11 @@ function validarTelefono(telefono) {
   return true;
 }
 
-// 2. Escuchar el evento de envío del formulario
+// 2. Evento de envío
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  // Validacion de nombre
+  // Validaciones visuales
   if (!validarNombre(nombreInput.value)) {
     messageDiv.innerHTML = '<span style="color: #dc3545; font-weight: bold;">⚠️ Error: Por favor, ingrese un nombre válido (solo letras).</span>';
     nombreInput.style.border = '2px solid #dc3545';
@@ -79,7 +76,6 @@ form.addEventListener('submit', function (e) {
     nombreInput.style.border = '1px solid #ddd';
   }
 
-  // Validacion de telefono
   if (!validarTelefono(telefonoInput.value)) {
     messageDiv.innerHTML = '<span style="color: #dc3545; font-weight: bold;">⚠️ Error: Por favor, ingrese un número de teléfono válido (mínimo 8 dígitos y solo números).</span>';
     telefonoInput.style.border = '2px solid #dc3545';
@@ -88,38 +84,40 @@ form.addEventListener('submit', function (e) {
     telefonoInput.style.border = '1px solid #ddd';
   }
 
-  // Si TODAS las validaciones son exitosas, se procede con el envio (AJAX)
-  messageDiv.innerHTML = '<span style="color: #007bff;">Enviando reserva...</span>';
+  messageDiv.innerHTML = '<span style="color: #007bff">Enviando reserva a Luna Salon...</span>';
   submitButton.disabled = true;
 
-  // 3. Obtener la URL de Google Forms y los datos del formulario
-  const formUrl = form.action;
-  const formData = new FormData(form);
+  // Preparar el objeto para la API
+  const reservaPrivada = {
+    cliente: nombreInput.value,
+    telefono: telefonoInput.value,
+    servicio: document.querySelector('select[name="entry.677048373"]').value,
+    fecha: fechaInput.value,
+    notas: document.querySelector('textarea[name="entry.1661087390"]').value
+  };
 
-  // 4. Construir la cadena de consulta (query string) con los datos
-  const queryString = new URLSearchParams(formData).toString();
-
-  // 5. Usar Fetch (AJAX) para enviar los datos de forma asíncrona
-  fetch(formUrl, {
+  // Enviar el objeto a la API
+  fetch('https://mi-api-en-render.com/api/citas', {
     method: 'POST',
-    mode: 'no-cors', // Importante para enviar a Google Forms sin errores CORS
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
+      'Content-Type': 'application/json'
     },
-    body: queryString // Envía los datos como una cadena de consulta
+    body: JSON.stringify(reservaPrivada)
   })
-    .then(() => {
-      // El envío fue exitoso (aunque no podamos leer la respuesta de Google Forms)
-      messageDiv.innerHTML = '<span style="color: #28a745; font-weight: bold;">¡Reserva enviada con éxito! Nos pondremos en contacto pronto.</span>';
-      form.reset(); // Limpia los campos del formulario
+    .then(response => {
+      if (response.ok) {
+        messageDiv.innerHTML = '<span style = "color: #28a745; font-weight: bold;">¡Reserva guardada en sistema! Nos vemos pronto.</span>';
+        form.reset();
+      }
     })
     .catch(error => {
-      // Algo salió mal (ej. problema de red)
+      // Si algo sale mal (ej. problema de red)
       console.error('Error de envío:', error);
-      messageDiv.innerHTML = '<span style="color: #dc3545;">Hubo un error al enviar la reserva. Por favor, inténtalo de nuevo o usa WhatsApp.</span>';
+      messageDiv.innerHTML = '<span style="color: #dc3545;">Hubo un error al enviar la reserva. Por favor, inténtalo de nuevo.</span>';
     })
     .finally(() => {
-      // Habilita el botón nuevamente
+      // Habilitar el botón nuevamente
       submitButton.disabled = false;
     });
+
 });
