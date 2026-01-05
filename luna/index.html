@@ -98,12 +98,13 @@
         </div>
 
         <div class="service-card ubicacion" style="grid-column: span 1; min-height: 300px;">
-          <h3>Nuestra Ubicación</h3> 
+          <h3>Nuestra Ubicación</h3>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.9265780689047!2d-83.92467452631679!3d9.856527175489783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0dfe99b850d85%3A0xa7764b12f497d868!2sLuna%20Sal%C3%B3n%20By%20Margarita!5e0!3m2!1ses!2scr!4v1767634676765!5m2!1ses!2scr"
             width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" alt="ubicacion del salon">
           </iframe>
           <p style="margin-top: 0.5rem; font-size: 0.9rem;">Oriental, Cartago</p>
+          <p style="font-size: 0.85rem; color: #666;">m 400m Sur del Hospital Universal</p>
         </div>
 
       </div>
@@ -136,12 +137,12 @@
     <div class="container">
       <h2 class="section-title services-title">Reserva tu Cita</h2>
       <div id="formMessage" style="text-align:center; margin-bottom:1rem;"></div>
-      <form id="reservaForm"
-        action="https://docs.google.com/forms/d/e/1FAIpQLSfsl_RTXBIW_264bx3I81LGqPnHIv9noLqAs5hlXogVJsOwNQ/formResponse"
-        method="POST">
-        <input type="text" name="entry.1457553108" placeholder="Nombre completo" required>
-        <input type="tel" name="entry.66915142" placeholder="Teléfono (WhatsApp)" required>
-        <select name="entry.677048373" required>
+
+      <form id="reservaForm">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono (WhatsApp)" required>
+
+        <select id="servicio" name="servicio" required>
           <option value="">Selecciona un servicio</option>
           <option value="Corte infantil">Corte infantil</option>
           <option value="Corte de dama">Corte de dama</option>
@@ -152,8 +153,9 @@
           <option value="Lifting & Laminado">Lifting & Laminado</option>
           <option value="Maquillaje y Peinado">Maquillaje y Peinado</option>
         </select>
-        <input type="date" name="entry.535377173" required min="2025-11-20">
-        <textarea name="entry.1661087390" placeholder="Notas (opcional)" rows="3"></textarea>
+
+        <input type="date" id="fecha" name="fecha" required min="2025-11-20">
+        <textarea id="notas" name="notas" placeholder="Notas (opcional)" rows="3"></textarea>
         <button type="submit" id="enviarBtn">Enviar Reserva</button>
       </form>
       <p style="text-align:center; margin-top:1rem; color:#636e72;">

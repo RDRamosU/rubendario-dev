@@ -5,16 +5,17 @@ const messageDiv = document.getElementById('formMessage');
 const submitButton = document.getElementById('enviarBtn');
 
 // Referencias de los campos input
-const nombreInput = document.querySelector('input[name="entry.1457553108"]');
-const telefonoInput = document.querySelector('input[name="entry.66915142"]');
-const fechaInput = document.querySelector('input[name="entry.535377173"]');
+const nombreInput = document.getElementById('nombre');
+const telefonoInput = document.getElementById('telefono');
+const fechaInput = document.getElementById('fecha');
+const servicioInput = document.getElementById('servicio');
+const notasInput = document.getElementById('notas');
 
 // Funcion de configuracion inicial
 function configurarFechaMinima() {
   if (!fechaInput) return;
 
   const hoy = new Date();
-  // Calcular la fecha de manana (se anade +1)
   const manana = new Date(hoy);
   manana.setDate(hoy.getDate() + 1);
 
@@ -89,15 +90,15 @@ form.addEventListener('submit', function (e) {
 
   // Preparar el objeto para la API
   const reservaPrivada = {
-    cliente: nombreInput.value,
+    nombre: nombreInput.value,
     telefono: telefonoInput.value,
-    servicio: document.querySelector('select[name="entry.677048373"]').value,
+    servicio: servicioInput.value,
     fecha: fechaInput.value,
-    notas: document.querySelector('textarea[name="entry.1661087390"]').value
+    notas: notasInput.value
   };
 
   // Enviar el objeto a la API
-  fetch('https://mi-api-en-render.com/api/citas', {
+  fetch('https://rubendario-dev.onrender.com/api/citas', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
