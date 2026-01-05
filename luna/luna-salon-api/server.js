@@ -4,6 +4,10 @@ const express = require('express');
 const cors = require('cors');
 const conectarDB = require('./config/db');
 
+// Importar rutas
+const servicioRoutes = require('./routes/servicioRoutes');
+const citas = require('./routes/citaRoutes');
+
 const app = express();
 
 // Conectar a la base de datos
@@ -17,9 +21,9 @@ app.use(cors({
     origin:['https://lunasalonbymargarita.salon', 'https:rubendario.dev']
 }));
 
-// Definir rutas
-app.use('/api/servicios', require('./routes/servicioRoutes'));
-app.use('/api/citas', require('./routes/citaRoutes'));
+// Importar rutas
+app.use('/api/servicios', servicioRoutes);
+app.use('/api/citas', citaRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
