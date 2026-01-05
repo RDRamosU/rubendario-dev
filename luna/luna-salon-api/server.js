@@ -6,7 +6,7 @@ const conectarDB = require('./config/db');
 
 // Importar rutas
 const servicioRoutes = require('./routes/servicioRoutes');
-const citas = require('./routes/citaRoutes');
+const citaRoutes = require('./routes/citaRoutes');
 
 const app = express();
 
