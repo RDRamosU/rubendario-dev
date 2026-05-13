@@ -1,195 +1,301 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rubén Darío | Ing. Informático y Desarrollador web junior</title>
-  <meta name="description"
-    content="Desarrollador Frontend especializado en sitios web elegantes y funcionales. Creador de Luna Salón by Margarita." />
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>RD</text></svg>">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      @apply bg-gray-50;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      @apply bg-purple-300 rounded-full;
-    }
-
-    .gradient-text {
-      @apply bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruben Dario — Ingeniero Informático</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Sora:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-50 text-gray-800 min-h-screen">
+<body>
 
-  <!-- Header -->
-  <header class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-pink-50 to-white opacity-70"></div>
-    <div class="relative container mx-auto px-6 py-24 text-center">
-      <h1 class="text-5xl md:text-7xl font-bold mb-4 gradient-text">Rubén Darío</h1>
-      <p class="text-xl md:text-2xl text-gray-600 mb-6">Ingeniero Informático</p>
-      <p class="max-w-2xl mx-auto text-lg text-gray-700">
-        Creo experiencias web claras, rápidas y elegantes. Especializado en diseño responsivo y soluciones prácticas
-        para pequeños negocios.
-      </p>
-      <div class="mt-8 flex gap-4 justify-center">
-        <a href="#proyectos"
-          class="px-8 py-3 bg-purple-600 text-white rounded-full font-medium hover:bg-purple-700 transition">Ver
-          Proyectos</a>
-        <a href="mailto:rubenramo26@hotmail.com"
-          class="px-8 py-3 border-2 border-purple-600 text-purple-600 rounded-full font-medium hover:bg-purple-50 transition">Contactar</a>
-      </div>
-    </div>
-  </header>
+    <!-- NAV -->
+    <nav>
+        <span class="nav-logo">rubendario.dev</span>
+        <ul class="nav-links">
+            <li><a href="#sobre-mi">sobre mí</a></li>
+            <li><a href="#proyectos">proyectos</a></li>
+            <li><a href="#contacto">contacto</a></li>
+        </ul>
+    </nav>
 
-  <!-- Proyectos -->
-  <section id="proyectos" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Mis Proyectos</h2>
-      <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-eyebrow">Disponible para oportunidades</div>
+        <h1>Ruben<br><span>Dario</span></h1>
+        <p class="hero-desc">
+            Ingeniero informático colegiado (CPIC) apasionado por construir productos web cuidadosamente diseñados.
+            Me enfoco en código limpio, buenas prácticas y soluciones escalables.
+        </p>
+        <div class="hero-cta">
+            <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
+            <a href="#contacto" class="btn btn-ghost">Hablemos</a>
+        </div>
+        <div class="scroll-hint">
+            <div class="scroll-line"></div>
+            scroll
+        </div>
+    </section>
 
-        <!-- Luna Salón -->
-        <div
-          class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="h-64 bg-gradient-to-br from-purple-200 to-pink-200 flex items-center justify-center">
-            <img src="c:\Users\ruben\Downloads\Luna Salon\luna-salon-logo.png" alt="Luna Salón"
-              class="w-full h-full object-cover">
-          </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-bold mb-3">Luna Salón by Margarita</h3>
-            <p class="text-gray-600 mb-4">
-              Sitio web completo para salón de belleza: Reserva de citas, galería de servicios, formulario de contacto y
-              integración con WhatsApp. Diseño elegante y responsivo para móviles.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">HTML/CSS</span>
-              <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">Responsive</span>
-              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">WhatsApp</span>
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi">
+        <div class="section-label">01 — sobre mí</div>
+        <h2 class="section-title">Quién soy</h2>
+        <div class="about-grid fade-in">
+            <div class="about-text">
+                <p>
+                    Soy <strong>egresado de Ingeniería Informática</strong>, con una sólida formación en desarrollo de
+                    software, estructuras de datos, algoritmos y sistemas. Aunque no cuento aún con experiencia laboral
+                    formal, he invertido ese tiempo en <strong>construir proyectos propios y aprender de forma
+                        autodidacta</strong>.
+                </p>
+                <p>
+                    Me enfoco en el ecosistema <strong>JavaScript / Web</strong>, buscando siempre entender los
+                    fundamentos antes de depender de abstracciones.
+                </p>
+                <p>
+                    Soy disciplinado, orientado a los detalles y disfruto resolver problemas reales. Estoy listo para
+                    dar el siguiente paso: aportar, aprender en equipo y crecer dentro de una organización.
+                </p>
+                <div class="about-links">
+                    <a href="https://linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener" class="about-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener" class="about-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
             </div>
-            <a href="https://rubendario.dev/luna/" target="_blank"
-              class="inline-flex items-center text-purple-600 font-medium hover:text-purple-800">
-              Ver sitio web →
-            </a>
-          </div>
-        </div>
-
-        <!-- Kanban-app -->
-        <div
-          class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="h-64 bg-gradient-to-br from-purple-200 to-pink-200 flex items-center justify-center">
-            <img src="kanban-app/img/Tablero kanban.png" alt="Tablero Kanban" class="w-full h-full object-cover">
-          </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-bold mb-3">Tablero Kanban Mern</h3>
-            <p class="text-gray-600 mb-4">
-              Aplicación web completa diseñada para la gestión de flujo de trabajo. Construida con React y
-              TypeScript para el frontend, y Node.js/Express con MongoDB Atlas para la API persistente.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">React</span>
-              <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">Node.js</span>
-              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">MongoDB</span>
+            <div class="skills-block">
+                <div class="skills-group">
+                    <div class="skills-group-label">Frontend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML / CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Tailwind</span>
+                    </div>
+                </div>
+                <div class="skills-group">
+                    <div class="skills-group-label">Backend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skills-group">
+                    <div class="skills-group-label">Herramientas</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
             </div>
-            <a href="https://rubendario.dev/kanban-app/index.html" target="_blank"
-              class="inline-flex items-center text-purple-600 font-medium hover:text-purple-800">
-              Ver la app →
-            </a>
-          </div>
         </div>
+    </section>
 
-        <!-- Proyecto futuro -->
-        <div
-          class="group bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-dashed border-gray-300">
-          <div class="h-64 flex flex-col items-center justify-center p-8 text-center">
-            <div class="text-6xl mb-4 text-gray-400">?</div>
-            <p class="text-xl font-medium text-gray-600">Próximo proyecto</p>
-            <p class="text-sm text-gray-500 mt-2">En desarrollo...</p>
-          </div>
-          <div class="p-8 bg-white">
-            <h3 class="text-2xl font-bold mb-3 text-gray-400">Disponible pronto</h3>
-            <p class="text-gray-500 italic">
-              ¿Una app de reservas? ¿Dashboard personalizado? ¡Ideas bienvenidas!
+    <!-- PROYECTOS -->
+    <section id="proyectos">
+        <div class="section-label">02 — proyectos</div>
+        <h2 class="section-title">Lo que he construido</h2>
+        <div class="projects-grid">
+
+            <div class="project-card fade-in">
+                <div>
+                    <div class="project-number">01</div>
+                    <div class="project-title">Task Manager CLI</div>
+                    <p class="project-desc">
+                        Herramienta de línea de comandos para gestionar tareas personales con soporte de categorías,
+                        prioridades y filtros. Diseñada con arquitectura modular y persistencia en JSON.
+                    </p>
+                    <div class="project-stack">
+                        <span class="stack-tag">Node.js</span>
+                        <span class="stack-tag">Commander.js</span>
+                        <span class="stack-tag">File System</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="icon-link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div>
+                    <div class="project-number">02</div>
+                    <div class="project-title">Weather Dashboard</div>
+                    <p class="project-desc">
+                        Aplicación web que consume la API de OpenWeatherMap para mostrar el clima actual y pronóstico de
+                        5 días. Incluye búsqueda por ciudad, geolocalización y modo oscuro.
+                    </p>
+                    <div class="project-stack">
+                        <span class="stack-tag">React</span>
+                        <span class="stack-tag">Tailwind CSS</span>
+                        <span class="stack-tag">OpenWeatherMap API</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="icon-link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="#" class="icon-link">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        Demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div>
+                    <div class="project-number">03</div>
+                    <div class="project-title">REST API — Gestión de Inventario</div>
+                    <p class="project-desc">
+                        API RESTful completa con autenticación JWT, CRUD de productos, control de stock y documentación
+                        con Swagger. Desplegada en Railway con base de datos PostgreSQL.
+                    </p>
+                    <div class="project-stack">
+                        <span class="stack-tag">Node.js</span>
+                        <span class="stack-tag">Express</span>
+                        <span class="stack-tag">PostgreSQL</span>
+                        <span class="stack-tag">JWT</span>
+                        <span class="stack-tag">Swagger</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="icon-link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div>
+                    <div class="project-number">04</div>
+                    <div class="project-title">Luna Salón by Margarita — Landing Page</div>
+                    <p class="project-desc">
+                        Sitio web para un salón de belleza real en Cartago, Costa Rica. Incluye catálogo de servicios,
+                        galería de trabajos, reserva de citas vía Calendly y dominio propio con certificado SSL.
+                    </p>
+                    <div class="project-stack">
+                        <span class="stack-tag">HTML</span>
+                        <span class="stack-tag">CSS</span>
+                        <span class="stack-tag">JavaScript</span>
+                        <span class="stack-tag">Calendly</span>
+                        <span class="stack-tag">Netlify</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/TU-USUARIO/luna-salon" target="_blank" rel="noopener" class="icon-link">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://lunasalonbymargarita.salon" target="_blank" rel="noopener" class="icon-link">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        Demo
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <div class="section-label">03 — contacto</div>
+        <h2 class="section-title">Trabajemos juntos</h2>
+        <div class="contact-card fade-in">
+            <p class="contact-subtitle">
+                Si buscas a alguien con ganas de aprender, crecer y aportar valor desde el primer día — me encantaría
+                conversar. Puedes contactarme directamente por WhatsApp o correo electrónico.
             </p>
-          </div>
+            <div class="contact-options">
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/50683876631?text=Hola%20Ruben%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar."
+                    class="contact-btn whatsapp" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                    </svg>
+                    WhatsApp
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:rubenramos26@hotmail.com?subject=Oportunidad%20Laboral&body=Hola%20Ruben%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar."
+                    class="contact-btn email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    Correo electrónico
+                </a>
+
+            </div>
         </div>
+    </section>
 
-      </div>
-    </div>
-  </section>
+    <!-- FOOTER -->
+    <footer>
+        <span class="footer-copy">© 2026 Ruben Dario</span>
+        <span class="footer-tag">Diseñado y construido a mano</span>
+    </footer>
 
-  <!-- Sobre mí -->
-  <section class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Sobre Mí</h2>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Foto centrada -->
-        <div class=" order-1 md:order-2">
-          <div class="w-96 h-96 rounded-2xl overflow-hidden shadow-2xl ring-8 ring-purple-100 mx-auto">
-            <img src="img/foto-ruben.jpg" alt="Ruben Darío" class="w-full h-full object-cover">
-          </div>
-        </div>
-        <!-- Texto -->
-        <div class=" order-2 md:order-1">
-          <h3 class="text-2xl font-bold mb-4">Hola, soy Rubén Darío</h3>
-          <p class="text-gray-600 mb-4">
-            Ingeniero informático y Desarrollador frontend junior apasionado por crear interfaces limpias y
-            funcionales. Me enfoco en la experiencia del usuario y en soluciones que realmente ayuden a las personas.
-          </p>
-          <p class="text-gray-600 mb-6">
-            Recientemente creé el sitio web para <strong>Luna Salón by Margarita</strong>, demostrando mi habilidad
-            para proyectos prácticos y atractivos.
-          </p>
-          <div class="flex gap-4">
-            <a href="https://github.com/RDRamosU" class="text-2xl text-gray-600 hover:text-purple-600 transition">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/ruben-ramos"
-              class="text-2xl text-gray-600 hover:text-purple-600 transition">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                }
+            });
+        }, { threshold: 0.1 });
 
-  <!-- Contacto -->
-  <section class="py-20 bg-white">
-    <div class="container mx-auto px-6 text-center max-w-2xl">
-      <h2 class="text-4xl font-bold mb-8 gradient-text">¿Hablamos?</h2>
-      <p class="text-lg text-gray-600 mb-8">
-        ¿Tienes un proyecto en mente? Me encantaría ayudarte a hacerlo realidad.
-      </p>
-      <a href="mailto:rubenramos26@hotmail.com"
-        class="inline-block px-10 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full text-lg hover:shadow-xl transition">
-        Envíame un email
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-8 bg-gray-100 text-center text-gray-600">
-    <p>© 2025 Rubén Darío • <a href="https://rubendario.dev" class="underline hover:text-purple-600">rubendario.dev</a>
-    </p>
-  </footer>
-
-  <!-- Font Awesome -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 
 </html>
