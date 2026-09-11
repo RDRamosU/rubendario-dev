@@ -329,6 +329,78 @@ section:first-of-type {
     border-color: var(--accent-border);
 }
 
+/* ── EXPERTISE / ESPECIALIZACIÓN ── */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.expertise-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: border-color 0.25s, background 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+
+.expertise-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--accent);
+    transition: height 0.3s ease;
+}
+
+.expertise-card:hover {
+    border-color: var(--accent-border);
+    background: var(--bg3);
+}
+
+.expertise-card:hover::before {
+    height: 100%;
+}
+
+.expertise-number {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    margin-bottom: 0.75rem;
+}
+
+.expertise-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.expertise-tag {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    letter-spacing: 0.03em;
+}
+
+.expertise-desc {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
 /* ── PROJECTS ── */
 .projects-grid {
     display: grid;
@@ -558,6 +630,10 @@ footer {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
     }
 
     .project-card {
